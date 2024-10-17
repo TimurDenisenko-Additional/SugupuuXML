@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="reisid">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="reis">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="lahtekoht" type="xs:string" />
+							<xs:element name="sihtkoht" type="xs:string" />
+							<xs:element name="reisikuupaev">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="alguskuupaev" type="xs:date" />
+										<xs:element name="loppkuupaev" type="xs:date" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="koguhind" type="xs:decimal" />
+							<xs:element name="reisigrupi_suurus" type="xs:unsignedByte" />
+						</xs:sequence>
+						<xs:attribute name="reisinimi" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
